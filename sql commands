@@ -2,7 +2,7 @@ CREATE TABLE DISEASES(Cid_Code text PRIMARY KEY, Diseases text, Absolute_Number 
 CREATE TABLE DOCTOR(doc_id integer PRIMARY KEY, Name text, Specialization text not null);
 CREATE TABLE PATIENT(card_id integer PRIMARY KEY,Name text, Diagnosis text not null,Date_CheckIn datetime not null,Date_CheckOut);
 CREATE TABLE HOSPITAL(hosp_id text PRIMARY KEY,Location text)
-CREATE TABLE COVID_TEST( doc_id FOREIGN KEY, card_id FOREIGN KEY,Test_date datetime, Test_Time datetime,Result varchar(8)
+CREATE TABLE COVID_TEST(test_id integer PRIMARY KEY, doc_id FOREIGN KEY, card_id FOREIGN KEY,Test_date datetime, Test_Time datetime,Result varchar(8)
 /* Create few records in this table */
 INSERT INTO DISEASES VALUES('I00-I99','Diseases of the circulatory system',1640172,29.3,17.37);
 INSERT INTO DISEASES VALUES('C00-D48','Neoplasms',1131635,20.2,11.99);
